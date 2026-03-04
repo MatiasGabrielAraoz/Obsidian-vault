@@ -1,0 +1,5 @@
+bandit1 passwd: ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
+bandit2 passwd: 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
+bandit3 passwd: MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+bandit4 passwd: 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
+bandit5 passwd: oyv4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw

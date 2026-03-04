@@ -1,0 +1,202 @@
+{
+  "main": {
+    "id": "9cac7fb9a973803a",
+    "type": "split",
+    "children": [
+      {
+        "id": "8e68c7d4564d855c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b8fe3d55d5dce8dc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Custom OS/Cross-compiler.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Cross-compiler"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "43cde2dd2da7f440",
+    "type": "split",
+    "children": [
+      {
+        "id": "85ccc0a700a10b5b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7170d3676f503710",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "712ebdf3977aaa64",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "3c60c02682025af4",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d2e6dc0ec6d94a13",
+    "type": "split",
+    "children": [
+      {
+        "id": "382303a673ac25f0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7ddb11029a8c19a4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes"
+            }
+          },
+          {
+            "id": "7883442d6aa12f41",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes"
+            }
+          },
+          {
+            "id": "9e5b5ab9602ad1a3",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "65a90316006208f7",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas las propiedades"
+            }
+          },
+          {
+            "id": "d66db66182626414",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Custom OS/Cross-compiler.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Cross-compiler"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "b8fe3d55d5dce8dc",
+  "lastOpenFiles": [
+    "Custom OS/Development tools.md",
+    "Custom OS/Cross-compiler.md",
+    "Custom OS",
+    "Linux General/grep.md",
+    "C/Especificadores de formato.md",
+    "Linux General/Linux indice.md",
+    "Linux indice.md",
+    "Pipes.md",
+    "Less.md",
+    "Comodines.md",
+    "grep.md",
+    "Hyprland/Hyprland Indice.md",
+    "Hyprland",
+    "Hyprland/Hyprland Configs.md",
+    "Bienvenido.md"
+  ]
+}
