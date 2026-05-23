@@ -1,0 +1,11 @@
+Linus Torvalds was born in the year 1969 in Finland, at the age of 10, he started coding in a language called BASIC, a pretty new language at the time (1979), 11 years later (in 1991), he created the **GNU/Linux kernel**.
+While he was studying at the **Helsinki university**, he used at the start an Email for version control and contacting method for contributions to the kernel, after some time, he wanted to upgrade this system because it was very slow, he found a proprietary program that had a free licence for contributing to open source programs, so he and all the contributors migrated to bitkeeper, but not everyone was happy, they said that the license wasn't permanent and could've been revoked in seconds. They had that right for now, but not for long, Linus decided to ignore the critics, but three years later, in 2005, regretted that decision. Because as some said the license was revoked and the devs panicked, nobody could make progress in the development, everyone was blaming him for that so he said he would take a week off.
+A week later he came with big news, he had achieved in one week the impossible, he developed a fully working control version program and called it **GIT**, although it was one of his biggest creations, he did not want to keep developing it, because he wanted to use 100% of his energy in the Linux **Kernel**, so he handed it over to one of his best friends, **Junio C. Hamano**.
+
+# Interesting details:
+## Linus Torvalds's name.
+Linus Torvalds was called that way because of Linus Pauling, a famous American Chemist, winner of a Nobel Prize. Although he jokes about that he was also named after the character with the blanket in the "Peanuts" Comic (Snoopy). 
+## Linus Torvalds's dads:
+His dad's were periodists and politic militants for the left in the 70's. Whilst his family was obsessed with the politics and social discussions, Linus had no interest in that subject. He preferred take shelter in books about science and math.
+## How Linus Torvalds learnt BASIC:
+The actual reason that made Linus discover computing is that his motherside grandfather, which was an statistic professor, bought a VIC-20, one of the Firsts household computers, But his grandfather had problems using it, so he asked Linus for help typing the manual Codes. That's when Linus discovered and learnt BASIC.

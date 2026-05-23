@@ -1,0 +1,3 @@
+- [x] Crear una función para Calcular los puntos de los senos
+- [x] Crear una función para calcular los puntos de los cosenos
+- [x] Crear una función para calcular los puntos de las tangentes

@@ -5,6 +5,11 @@
 | `%lf`         | `double`     |
 | `%c`          | `char`       |
 | `%s`          | `string`     |
+# *IMPORTANTE: EXPLICACIÓN DE NIKI:*
+* No hablar de cosas que hagan dudar de sus conocimientos hasta fortalecer el vínculo
+* Ser gracioso y comprensivo (DIFICIL)
+* No mucho más
+
 
 | Tipo de dato | Tamaño      |     |
 | ------------ | ----------- | --- |
