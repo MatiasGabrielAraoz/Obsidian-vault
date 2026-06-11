@@ -1,60 +1,143 @@
 
-# 2026-04-21
-Implementar en el proyecto **ZinclasPrisma.ApiClient** los métodos necesarios para consumir los endpoints de autenticación de usuarios.
-- [x] Crear AuthApiClient ✅ 2026-04-24
-- [x] Usar el metodo **LoginAsync(username, pass)** ✅ 2026-04-25
-El método LoginAsync es usado en el cliente.
-- [x] Manejar el token JWT recibido ✅ 2026-04-25
-- [x] Configurar el envío del token en futuras requests ✅ 2026-04-25
-Trabajar en rama **beta1-sprint-01-back-01-auth**
-
-# 2026-04-26
-Ya que vamos a tener que hacer un ApiClient para Rotar S.A. y otro para la escuela, lo mejor va a ser definir una interfaz, digamos “ApiClientBase”, y despues hacer “ApiClientRotar” y “ApiClientSchool” para implementar los metodos especificos.
-
-- [x] Renombrar ApiClient a ApiClientBase ✅ 2026-04-28
-- [x] Mantener en ApiClientBase solo metodos que sean utiles para ambos (ej: inicio de sesión de usuarios) ✅ 2026-04-28
-- [x] Crear los otros dos y hacer que hereden de base. ✅ 2026-04-29
-(Implementar metodos especificos para cada uno es otra tarea)  
-
-Trabajar en rama: **beta-1-sprint-02-back-01-endpoints**
-
-# 2026-05-12
-Implementar en el SuperadminApiClient los metodos para post y get de las etiquetas PersonLabel, DataLabel y OrderLabel por separado
-### Implementar los métodos para post y get de PersonLabel
-- [x] post
-- [x] get
-### Implementar los métodos para post y get de DataLabel
-- [x] post
-- [x] get
-### Implementar los métodos para post y get de OrderLabel
-- [x] post
-- [x] get
-
-Trabajar en rama: **Beta-1-sprint-03-back-01-endpoints**
 
 
-# 2026/05/20
-Crear un endpoint para crear varios registros a la vez
-### URL de endpoint: /api/Generic/create-multiple
-- [ ] manejar: separate = true
-iterar diccionario de DataLabels
-- [ ] manejar: separate = false
-Crear un solo order y un solo datum y que los generic registries apunten a esa dirección
+# 2026/06/09
+## Trabajar en rama **beta-1-sprint-06-back-01-apiclients**
 
+_Para poder hacer esto necesitan ejecutar el endpoint de setup, pasandole el código “rotarsa“ para que les defina toda la db creándoles todas las tablas mágicas y labels que van a necesitar para esto_
+5
+### Los métodos _deben estar comentados sobre como debe utilizarse (puede ser arriba del método), para que luego puedan ser consumidos correctamente desde el front._
 
-## Parametros a ingresar:
-- [x] El id del person
-- [x] El label de order
-- [x] El valor para el order
-- [x] Un booleano “separate“
-- [ ] Un diccionario que la key se inteprete como el DataLabel en el cual guardar y los values como los valores que guardar en las etiquetas correspondientes
+#### _Los IDs deben ser **hardcodeados**, recuerden que estos metodos ya no son genericos, sino que son dedicados al cliente y seran consumidos por el front, el cual NO debe enterarse de que la db es generica. Pueden obtener todos los IDs ejecutando los siguientes endpoints:_
 
+![[Pasted image 20260611190923.png]]
 
-Que reciba:
+Implementar los métodos necesarios para administrar la relación entre Moldes y Partes.
 
-- Una lista con dtos para los data.
-- Un dto para el order.
-- el separate
-- id del person
+La relación se almacena en la Tabla Mágica "Receta de Moldes" mediante los siguientes campos:
 
-Todos los registros genericos creados con esta función tienen que tener una instancia independiente de order si separate es true, como si todos hubieran sido creados uno por uno con el endpoint normal de creación, si separate es falso todos los registros genericos creados esta vez deberan indicar a un mismo order.
+- ParteId
+    
+- MoldeId
+    
+- MoldeProduce
+    
+
+Donde:
+
+- ParteId = Parte producida.
+    
+- MoldeId = Molde que produce la parte.
+    
+- MoldeProduce = Cantidad de piezas producidas por ese molde en cada ciclo.
+    
+
+## Métodos requeridos
+
+### Crear relación Parte-Molde
+
+Implementar un método que permita registrar de forma sencilla la relación entre una parte y un molde.
+
+Ejemplo:
+```C#
+CreatePartMoldRelation(  
+int moldeId,  
+int parteId,  
+int cantidadProduccion  
+);
+```
+### Obtener las partes que produce un molde
+
+Implementar un método que reciba un moldeId y devuelva la parte/s asociadas junto con la cantidad producida. (incluir todos los atributos de parte, img abajo)
+
+Ejemplo:
+```C#
+GetPartsByMold(int moldeId);
+
+Resultado esperado (crear DTO en ZinclasPrisma.RotarSA):
+
+[  
+{  
+"partId": 25,  
+"partName": "Techo",  
+"partDescription": "asd",  
+"partCategory": "asd",  
+"partTypePiece": "asd",  
+"partWeight": "asd",  
+"partActive": "asd",  
+"quantityProduced": 4  
+}  
+]
+```
+### Obtener el molde que produce una parte
+
+Implementar un método que reciba un parteId y devuelva el molde/s asociado junto con la cantidad producida. (incluir todos los atributos de molde, img abajo)
+
+Ejemplo:
+```C#
+GetMoldByPart(int parteId);
+
+Resultado esperado (crear DTO en ZinclasPrisma.RotarSA):  
+[
+
+{  
+"moldId": 10,  
+"moldName": "Molde Casa Grande",  
+"moldDescription": "Techo Verde",  
+"moldState": "asd",  
+"moldUbicationRow": "asd",  
+"moldUbicationPosition": "asd",  
+"moldAssignedMachine": "asd",  
+"moldObservations": "asd",  
+"quantityProduced": 4  
+}
+
+]
+```
+Estos métodos serán utilizados:
+
+### Vista de Moldes
+
+Permitir mostrar:
+
+- Qué parte produce el molde.
+    
+- Cuántas unidades produce.
+    
+
+### Vista de Partes
+
+Permitir mostrar:
+
+- Qué molde produce la parte.
+    
+- Cuántas unidades produce dicho molde.
+    
+
+**Importante**: Para que no se haga por ejemplo en el caso de cada molde que se muestre en el front una llamada a la funcion para obtener que partes produce, necesito que implementen un metodo que devuelva todas las relaciones parte molde existentes.
+
+Ej: GetAllPartMoldRelations();
+
+y que devuelva algo asi (crear DTO en ZinclasPrisma.RotarSA):
+```Json
+[  
+{  
+"moldId": 10,  
+"moldName": "Molde Casa Grande",  
+"moldDescription": "Techo Verde",  
+"partId": 25,  
+"partName": "Techo",  
+"partDescription": "Techo Verde",  
+"quantityProduced": 4  
+}  
+]
+```
+Los métodos específicos son para mostrar detalles.
+
+El método masivo para los listados.
+
+Esta es la informacion que vas a necesitar:
+
+![[Pasted image 20260611190942.png]]
+
+![[Pasted image 20260611190950.png]]
