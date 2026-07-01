@@ -1,4 +1,4 @@
-# 2026-04-21
+ # 2026-04-21
 Implementar en el proyecto **ZinclasPrisma.ApiClient** los métodos necesarios para consumir los endpoints de autenticación de usuarios.
 - [x] Crear AuthApiClient ✅ 2026-04-24
 - [x] Usar el metodo **LoginAsync(username, pass)** ✅ 2026-04-25

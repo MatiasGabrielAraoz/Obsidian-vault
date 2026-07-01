@@ -5,7 +5,7 @@
 ## Trabajar en rama **beta-1-sprint-06-back-01-apiclients**
 
 _Para poder hacer esto necesitan ejecutar el endpoint de setup, pasandole el código “rotarsa“ para que les defina toda la db creándoles todas las tablas mágicas y labels que van a necesitar para esto_
-5
+
 ### Los métodos _deben estar comentados sobre como debe utilizarse (puede ser arriba del método), para que luego puedan ser consumidos correctamente desde el front._
 
 #### _Los IDs deben ser **hardcodeados**, recuerden que estos metodos ya no son genericos, sino que son dedicados al cliente y seran consumidos por el front, el cual NO debe enterarse de que la db es generica. Pueden obtener todos los IDs ejecutando los siguientes endpoints:_
@@ -17,11 +17,10 @@ Implementar los métodos necesarios para administrar la relación entre Moldes y
 La relación se almacena en la Tabla Mágica "Receta de Moldes" mediante los siguientes campos:
 
 - ParteId
-    
+   
 - MoldeId
-    
+
 - MoldeProduce
-    
 
 Donde:
 
@@ -117,7 +116,7 @@ Permitir mostrar:
 **Importante**: Para que no se haga por ejemplo en el caso de cada molde que se muestre en el front una llamada a la funcion para obtener que partes produce, necesito que implementen un metodo que devuelva todas las relaciones parte molde existentes.
 
 Ej: GetAllPartMoldRelations();
-
+t
 y que devuelva algo asi (crear DTO en ZinclasPrisma.RotarSA):
 ```Json
 [  

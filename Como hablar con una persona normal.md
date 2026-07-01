@@ -1,6 +1,6 @@
-- [x] Saludar
-- [x] Preguntar Como está
-- [x] Preguntar que hace
+- [ ] Saludar
+- [ ] Preguntar Como está
+- [ ] Preguntar que hace
 - [ ] Preguntar que cuenta
 - [ ] Seguir la conversación desviandola hacia un tema de interes
 - [ ] Preguntar de gustos, intentando justificar tus conocimientos sobre lo que sabes y no deberías saber de antemano
